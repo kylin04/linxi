@@ -42,52 +42,43 @@
     }
 
     .card {
+      display: block;
       width: 100%;
       padding: 38px 24px 34px;
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 30px;
+      color: inherit;
       background: rgba(10, 10, 18, 0.66);
       box-shadow:
         0 24px 80px rgba(0, 0, 0, 0.45),
         0 0 60px rgba(126, 72, 255, 0.22);
       backdrop-filter: blur(18px);
+      text-decoration: none;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .logo-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 28px 90px rgba(0, 0, 0, 0.5),
+        0 0 78px rgba(190, 91, 255, 0.42);
+    }
+
+    .card:active {
+      transform: scale(0.99);
+    }
+
+    .logo {
+      display: block;
       width: min(68vw, 230px);
       height: min(68vw, 230px);
       max-width: 230px;
       max-height: 230px;
+      margin: 0 auto;
       border-radius: 34px;
-      background: rgba(255, 255, 255, 0.04);
-      box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.12),
-        0 0 42px rgba(138, 78, 255, 0.48);
-      transition: transform 0.22s ease, box-shadow 0.22s ease;
-      overflow: hidden;
-      text-decoration: none;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .logo-link:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow:
-        0 0 0 1px rgba(255, 255, 255, 0.18),
-        0 0 58px rgba(190, 91, 255, 0.68);
-    }
-
-    .logo-link:active {
-      transform: scale(0.98);
-    }
-
-    .logo {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      display: block;
+      box-shadow: 0 0 46px rgba(138, 78, 255, 0.46);
     }
 
     .subtitle {
@@ -109,7 +100,7 @@
         border-radius: 24px;
       }
 
-      .logo-link {
+      .logo {
         border-radius: 28px;
       }
     }
@@ -117,23 +108,21 @@
 </head>
 <body>
   <main class="page">
-    <section class="card" aria-label="公众号文章入口">
-      <a
-        class="logo-link"
-        href="https://mp.weixin.qq.com/s/X8lvgq8h6evOZeIR1YYXAw"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="进入公众号文章"
-      >
-        <img
-          class="logo"
-          src="logo.png"
-          alt="LINXI ESPORTS Logo"
-        />
-      </a>
+    <a
+      class="card"
+      href="https://mp.weixin.qq.com/s/X8lvgq8h6evOZeIR1YYXAw"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="进入公众号文章"
+    >
+      <img
+        class="logo"
+        src="logo.png"
+        alt="LINXI ESPORTS Logo"
+      />
 
       <p class="subtitle">点击 Logo 进入公众号文章</p>
-    </section>
+    </a>
   </main>
 </body>
 </html>
