@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LINXI ESPORTS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #2a1450 0%, #090909 55%, #000000 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      font-family: Arial, sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: rgba(124, 60, 255, 0.18);
+      filter: blur(120px);
+      border-radius: 50%;
+      top: -150px;
+      right: -150px;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(210, 76, 255, 0.12);
+      filter: blur(120px);
+      border-radius: 50%;
+      bottom: -120px;
+      left: -120px;
+    }
+
+    .logo-link {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      border-radius: 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 0 35px rgba(124, 60, 255, 0.45);
+    }
+
+    .logo-link:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 0 50px rgba(180, 80, 255, 0.75);
+    }
+
+    .logo {
+      width: min(70vw, 320px);
+      border-radius: 24px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <a
+    class="logo-link"
+    href="https://mp.weixin.qq.com/s/X8lvgq8h6evOZeIR1YYXAw?scene=1&click_id=1"
+    target="_blank"
+    rel="noopener"
+    aria-label="打开微信公众号文章"
+  >
+    <img src="logo.png" class="logo" alt="LINXI ESPORTS Logo" onerror="this.onerror=null;this.src='logo.jpg';" />
+  </a>
+</body>
+</html>
